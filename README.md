@@ -103,16 +103,29 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    git clone https://github.com/mmmiller3rd/FizzBuzz.git
    ```
-3. Install Java dependencies
+2. Install Java dependencies
    ```sh
    ./gradlew clean build
    ```
-4. Change git remote url to avoid accidental pushes to base project
+3. Change git remote url to avoid accidental pushes to base project
    ```sh
    git remote set-url origin mmmiller3rd/FizzBuzz
    git remote -v # confirm the changes
    ```
 
+### Running
+
+1. Execute
+    ```sh
+   ./gradlew bootRun
+   ```
+
+2. Make request
+    ```sh
+   "n" is not required in the request. The default value if none is provided is 100.
+   curl --location 'localhost:8080/runFizzBuzz'
+   curl --location 'localhost:8080/runFizzBuzz?n=<SomeNumber>'
+    ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
